@@ -1,9 +1,9 @@
 **Definicion del problema.**
 
-    El fraude con las tarjetas de credito es un problema grave que afecta a muchas personas y organizaciones financieras como banco y empresa de tarjetas,comercios y consumidores. este tipo de fraude genera perdidas economicas significativas.
+El fraude con las tarjetas de credito es un problema grave que afecta a muchas personas y organizaciones financieras como banco y empresa de tarjetas,comercios y consumidores. este tipo de fraude genera perdidas economicas significativas.
 
 
-    Ademas este tipo de fraudes generan un costo operativo asociado a la deteccion de estos mismos ya que al revisar altos volumenes de datos (transacciones) a tiempo real, una mala deteccion conlleva a tener errores relevantes:
+Ademas este tipo de fraudes generan un costo operativo asociado a la deteccion de estos mismos ya que al revisar altos volumenes de datos (transacciones) a tiempo real, una mala deteccion conlleva a tener errores relevantes:
         
             Falsos negativos: Transacciones fraudulentas que no son detectadas.
 
@@ -36,11 +36,11 @@
                 Banco
                 Fraude
 
-        Modelos(s) seleccionado(s)
+**Modelos(s) seleccionado(s)**
 
-            1 Arbol de decision ya que sirve como linea base proque  más facil de interpretar, ademas permite visualizar el proceso de toma de decisones y entender las variables más relevantes , nos va servier para clasificar si la transaccion es fraudilenta o no
+            1) Arbol de decision: Este tipo de modelo permite realizar predicciones con comportamientos complejos, lo cual es crucial para este tipo de problematica, ya que los fraudes a las tarjetas de creditos se pueden desarrollar con una gran variedad de metodos y patrones. Ademas, los arboles de decision permiten visualizar el proceso de toma de decisones y entender las variables más relevantes, lo que nos va servier para clasificar si la transaccion es fraudilenta o no.
 
-            2 random forest tambien podemos usarlo ya que contiene multiples arboles de decision y esto aumenta la capacidad predictiva, ademas es robusto contra el overfiting y tiene mejor rendimiento ante los dataset con ruidos y que sean complejos(muchas variables).
+            2) random forest: tambien podemos usarlo ya que contiene multiples arboles de decision y esto aumenta la capacidad predictiva, ademas es robusto contra el overfiting y tiene mejor rendimiento ante los dataset con ruidos y que sean complejos(muchas variables).
 
         
 
