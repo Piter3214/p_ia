@@ -5,12 +5,11 @@ El fraude con las tarjetas de credito es un problema grave que afecta a muchas p
 
 Ademas este tipo de fraudes generan un costo operativo asociado a la deteccion de estos mismos ya que al revisar altos volumenes de datos (transacciones) a tiempo real, una mala deteccion conlleva a tener errores relevantes:
         
-            Falsos negativos: Transacciones fraudulentas que no son detectadas.
+Falsos negativos: Transacciones fraudulentas que no son detectadas.
 
-            Falsos positivos: Transacciones legítimas que son detectadas como fraudulentas
+Falsos positivos: Transacciones legítimas que son detectadas como fraudulentas
 
-    
-    Estos errores provocan la desconfianza de los clientes hacia el sistema financiera de las tarjetas de credito, conllevando a una posible perdida de clientes y a su vez generando mala reputacion de las entidades involucradas.
+Estos errores provocan la desconfianza de los clientes hacia el sistema financiera de las tarjetas de credito, conllevando a una posible perdida de clientes y a su vez generando mala reputacion de las entidades involucradas.
 
 
 **Plan de accion:**
