@@ -44,8 +44,7 @@
 
         
 
-    Los modelos seleccionados están alineados con los objetivos del proyecto: lograr una detección eficiente y explicable del fraude, minimizando tanto los falsos negativos como los falsos positivos.
-
+    Los métodos de decisión tree y random forest son modelos de clasificación con aprendizaje supervisado, los cuales nos serán de mucha utilidad para poder detec-tar los fraudes de forma eficiente, reduciendo tanto los falsos positivos como los falsos negativos.
  Árbol de Decisión
 
     Ventajas:
