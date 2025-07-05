@@ -14,9 +14,9 @@ Estos errores provocan la desconfianza de los clientes hacia el sistema financie
 
 **Plan de accion:**
 
-    Descripcion  del dataset:
+Descripcion  del dataset:
 
-        El data set abarca los fraudes de las transacciones de las tajetas de creditos el cual la moneda del dataset esta en libras, cuenta con 16 columnas las cuales son las siguientes:
+El data set abarca los fraudes de las transacciones de las tajetas de creditos el cual la moneda del dataset esta en libras, cuenta con 16 columnas las cuales son las siguientes:
 
                 ID de transacción
                 Fecha
@@ -37,46 +37,46 @@ Estos errores provocan la desconfianza de los clientes hacia el sistema financie
 
 **Modelos(s) seleccionado(s)**
 
-            1) Arbol de decision: Este tipo de modelo permite realizar predicciones con comportamientos complejos, lo cual es crucial para este tipo de problematica, ya que los fraudes a las tarjetas de creditos se pueden desarrollar con una gran variedad de metodos y patrones. Ademas, los arboles de decision permiten visualizar el proceso de toma de decisones y entender las variables más relevantes, lo que nos va servier para clasificar si la transaccion es fraudilenta o no.
+1) Arbol de decision: Este tipo de modelo permite realizar predicciones con comportamientos complejos, lo cual es crucial para este tipo de problematica, ya que los fraudes a las tarjetas de creditos se pueden desarrollar con una gran variedad de metodos y patrones. Ademas, los arboles de decision permiten visualizar el proceso de toma de decisones y entender las variables más relevantes, lo que nos va servier para clasificar si la transaccion es fraudilenta o no.
 
-            2) random forest: tambien podemos usarlo ya que contiene multiples arboles de decision y esto aumenta la capacidad predictiva, ademas es robusto contra el overfiting y tiene mejor rendimiento ante los dataset con ruidos y que sean complejos(muchas variables).
-
+2) random forest: Este modelo es capaz de predecir comportamientos complejos al igual que el anterior, sin embargo cuenta con la ventaja de controlar el overfiting que se tiende a generar en los modelos de arbol de decision y tiene un mejor rendimiento con dataset con ruidos. Ademas, permite conocer de forma mas eficiente la importancia del resto de variables para la prediccion de fraudes, lo que nos permitira comprender cuales son los principales metodos utilizados para realizar fraudes.
         
 
-    Los métodos de decisión tree y random forest son modelos de clasificación con aprendizaje supervisado, los cuales nos serán de mucha utilidad para poder detec-tar los fraudes de forma eficiente, reduciendo tanto los falsos positivos como los falsos negativos.
- Árbol de Decisión
+Los métodos de decisión tree y random forest son modelos de clasificación con aprendizaje supervisado, los cuales nos serán de mucha utilidad para poder detec-tar los fraudes de forma eficiente, reduciendo tanto los falsos positivos como los falsos negativos.
 
-    Ventajas:
+**Árbol de Decisión**
 
-        Fácil de interpretar y visualizar.
+Ventajas:
 
-        Útil para entender la lógica del modelo y la relevancia de las variables.
+- Fácil de interpretar y visualizar.
 
-    Limitaciones:
+- Útil para entender la lógica del modelo y la relevancia de las variables.
 
-        Tiende a sobreajustarse a los datos de entrenamiento.
+Limitaciones:
 
-        Menor capacidad de generalización comparado con modelos más robustos.
+- Tiende a sobreajustarse a los datos de entrenamiento.
 
- Random Forest
+- Menor capacidad de generalización comparado con modelos más robustos.
 
-    Ventajas:
+**Random Forest**
 
-        Mejor capacidad predictiva que un solo árbol.
+Ventajas:
 
-        Reduce el riesgo de overfitting al combinar múltiples árboles.
+- Mejor capacidad predictiva que un solo árbol.
 
-        Maneja bien datos con muchas variables y relaciones no lineales.
+- Reduce el riesgo de overfitting al combinar múltiples árboles.
 
-        Permite estimar la importancia de cada variable en la predicción.
+- Maneja bien datos con muchas variables y relaciones no lineales.
 
-    Limitaciones:
+- Permite estimar la importancia de cada variable en la predicción.
 
-        Menos interpretabilidad que un árbol único.
+Limitaciones:
 
-        Mayor costo computacional.
+- Menos interpretabilidad que un árbol único.
+
+- Mayor costo computacional.
 
 
-        https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html
 
 data set https://www.kaggle.com/datasets/anurag629/credit-card-fraud-transaction-data/data# p_ia
