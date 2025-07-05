@@ -44,6 +44,41 @@
 
         
 
-ls
+    Los modelos seleccionados están alineados con los objetivos del proyecto: lograr una detección eficiente y explicable del fraude, minimizando tanto los falsos negativos como los falsos positivos.
+
+ Árbol de Decisión
+
+    Ventajas:
+
+        Fácil de interpretar y visualizar.
+
+        Útil para entender la lógica del modelo y la relevancia de las variables.
+
+    Limitaciones:
+
+        Tiende a sobreajustarse a los datos de entrenamiento.
+
+        Menor capacidad de generalización comparado con modelos más robustos.
+
+ Random Forest
+
+    Ventajas:
+
+        Mejor capacidad predictiva que un solo árbol.
+
+        Reduce el riesgo de overfitting al combinar múltiples árboles.
+
+        Maneja bien datos con muchas variables y relaciones no lineales.
+
+        Permite estimar la importancia de cada variable en la predicción.
+
+    Limitaciones:
+
+        Menos interpretabilidad que un árbol único.
+
+        Mayor costo computacional.
+
+
+        https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html
 
 data set https://www.kaggle.com/datasets/anurag629/credit-card-fraud-transaction-data/data# p_ia
