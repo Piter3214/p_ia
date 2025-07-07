@@ -80,3 +80,16 @@ Limitaciones:
 https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html
 
 data set https://www.kaggle.com/datasets/anurag629/credit-card-fraud-transaction-data/data# p_ia
+
+
+
+**codigo**
+
+        import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix
+from sklearn.model_selection import train_test_split
+
+:3
