@@ -83,13 +83,19 @@ data set https://www.kaggle.com/datasets/anurag629/credit-card-fraud-transaction
 
 
 
-**codigo**
-
-        import pandas as pd
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
-from sklearn.metrics import confusion_matrix
-from sklearn.model_selection import train_test_split
-
-:3
+**Análisis Exploratorio de Datos (EDA) - Proyecto de Detección de Fraude**
+1. Carga y exploración del dataset
+- Se cargó un dataset con 100.000 transacciones de tarjetas de crédito.
+- Se observaron 16 columnas con datos mixtos: numéricos y categóricos.
+- La variable objetivo es 'Fraud', con un desbalance del 7.2% de fraudes.
+2. Limpieza de datos
+- Se detectaron símbolos de moneda (£) en la columna 'Amount', los cuales fueron eliminados y convertidos a valores numéricos (float).
+- Se identificaron columnas con valores nulos:
+    * Amount: completado con 0.
+    * Merchant Group, Shipping Address, Gender: se dejaron como NaN para decidir su tratamiento posterior.
+- Se verificó que no existían valores tipo 'unknown' o 'unknow'.
+3. Exploración de variables numéricas
+- Se identificaron como variables numéricas principales: Time, Amount, Age, Fraud.
+- Para evitar sobrecargar el entorno, se tomó una muestra aleatoria de 5.000 filas.
+- Se realizaron histogramas de cada una de estas variables para observar su distribución.
+- Debido a errores del entorno (VS Code - Jupyter renderer), se optó por guardar los gráficos como imágenes PNG en lugar de mostrarlos en pantalla.
