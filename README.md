@@ -99,6 +99,7 @@ data set https://www.kaggle.com/datasets/anurag629/credit-card-fraud-transaction
 - Para evitar sobrecargar el entorno, se tomó una muestra aleatoria de 5.000 filas.
 - Se realizaron histogramas de cada una de estas variables para observar su distribución.
 - Debido a errores del entorno (VS Code - Jupyter renderer), se optó por guardar los gráficos como imágenes PNG en lugar de mostrarlos en pantalla.
+- reinicie el entorno para evitar lo anterior :3
 
 
 https://scikit-learn.org/stable/modules/ensemble.html#forests-of-randomized-trees
