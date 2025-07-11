@@ -82,23 +82,17 @@ https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.Strati
 data set https://www.kaggle.com/datasets/anurag629/credit-card-fraud-transaction-data/data# p_ia
 
 
+# Implemetacion
+1. Carga del Dataset
+Se utilizó el paquete `pandas` para cargar el archivo `CreditCardData.csv`. La primera inspección permitió observar la estructura general del conjunto de datos, como el número de columnas, tipos de datos y valores nulos.
+2. Exploración y Limpieza de Datos
+Se revisó la presencia de valores nulos con `df.isnull().sum()` y se identificaron columnas con valores como 'unknown', que fueron tratadas como `NaN` y luego imputadas según el tipo de variable. También se aplicó la conversión de identificadores (ID) a valores enteros.
+3. Análisis Exploratorio (EDA)
+Se graficaron variables categóricas como Gender, Entry_Mode, Time_of_day y Card_Type para entender su distribución. Este paso permitió identificar desbalances y relaciones entre variables y la clase objetivo Fraud.
+4. Feature Engineering
+Las variables categóricas fueron recodificadas manualmente.
 
-**Análisis Exploratorio de Datos (EDA) - Proyecto de Detección de Fraude**
-1. Carga y exploración del dataset
-- Se cargó un dataset con 100.000 transacciones de tarjetas de crédito.
-- Se observaron 16 columnas con datos mixtos: numéricos y categóricos.
-- La variable objetivo es 'Fraud', con un desbalance del 7.2% de fraudes.
-2. Limpieza de datos
-- Se detectaron símbolos de moneda (£) en la columna 'Amount', los cuales fueron eliminados y convertidos a valores numéricos (float).
-- Se identificaron columnas con valores nulos:
-    * Amount: completado con 0.
-    * Merchant Group, Shipping Address, Gender: se dejaron como NaN para decidir su tratamiento posterior.
-- Se verificó que no existían valores tipo 'unknown' o 'unknow'.
-3. Exploración de variables numéricas
-- Se identificaron como variables numéricas principales: Time, Amount, Age, Fraud.
-- Para evitar sobrecargar el entorno, se tomó una muestra aleatoria de 5.000 filas.
-- Se realizaron histogramas de cada una de estas variables para observar su distribución.
-- Debido a errores del entorno (VS Code - Jupyter renderer), se optó por guardar los gráficos como imágenes PNG en lugar de mostrarlos en pantalla.
+Cris ayudame a profundizar cuando tengas tiempo ;(
 
 
 https://scikit-learn.org/stable/modules/ensemble.html#forests-of-randomized-trees
