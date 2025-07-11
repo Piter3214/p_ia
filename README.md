@@ -93,6 +93,26 @@ Se graficaron variables categóricas como Gender, Entry_Mode, Time_of_day y Card
 Las variables categóricas fueron recodificadas manualmente. t_internacional, r_hora,comparacion_direc
 
 Cris ayudame a profundizar cuando tengas tiempo ;(
+=======
+**Análisis Exploratorio de Datos (EDA) - Proyecto de Detección de Fraude**
+1. Carga y exploración del dataset
+- Se cargó un dataset con 100.000 transacciones de tarjetas de crédito.
+- Se observaron 16 columnas con datos mixtos: numéricos y categóricos.
+- La variable objetivo es 'Fraud', con un desbalance del 7.2% de fraudes.
+2. Limpieza de datos
+- Se detectaron símbolos de moneda (£) en la columna 'Amount', los cuales fueron eliminados y convertidos a valores numéricos (float).
+- Se identificaron columnas con valores nulos:
+    * Amount: completado con 0.
+    * Merchant Group, Shipping Address, Gender: se dejaron como NaN para decidir su tratamiento posterior.
+- Se verificó que no existían valores tipo 'unknown' o 'unknow'.
+3. Exploración de variables numéricas
+- Se identificaron como variables numéricas principales: Time, Amount, Age, Fraud.
+- Para evitar sobrecargar el entorno, se tomó una muestra aleatoria de 5.000 filas.
+- Se realizaron histogramas de cada una de estas variables para observar su distribución.
+- Debido a errores del entorno (VS Code - Jupyter renderer), se optó por guardar los gráficos como imágenes PNG en lugar de mostrarlos en pantalla.
+- reinicie el entorno para evitar lo anterior :3
+
 
 
 https://scikit-learn.org/stable/modules/ensemble.html#forests-of-randomized-trees
+dd
