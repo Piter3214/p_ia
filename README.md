@@ -112,6 +112,8 @@ Cris ayudame a profundizar cuando tengas tiempo ;(
 - Debido a errores del entorno (VS Code - Jupyter renderer), se optó por guardar los gráficos como imágenes PNG en lugar de mostrarlos en pantalla.
 - reinicie el entorno para evitar lo anterior :3
 
+intento 1
+
 
 
 https://scikit-learn.org/stable/modules/ensemble.html#forests-of-randomized-trees
