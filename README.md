@@ -90,7 +90,7 @@ Se revisó la presencia de valores nulos con `df.isnull().sum()` y se identifica
 3. Análisis Exploratorio (EDA)
 Se graficaron variables categóricas como Gender, Entry_Mode, Time_of_day y Card_Type para entender su distribución. Este paso permitió identificar desbalances y relaciones entre variables y la clase objetivo Fraud.
 4. Feature Engineering
-Las variables categóricas fueron recodificadas manualmente.
+Las variables categóricas fueron recodificadas manualmente. t_internacional, r_hora,comparacion_direc
 
 Cris ayudame a profundizar cuando tengas tiempo ;(
 
