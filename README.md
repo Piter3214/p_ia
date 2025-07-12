@@ -104,12 +104,8 @@ Posteriormente Procedemos a separar los datos, donde el 70% sera para el trainin
 6. Aplicar modelo
 Primero se aplicaco un modelo de Desicion Tree, donde se aplico un balanceamiento de los pesos de las clases con la finalidad de que el modelo mejore la precision en la deteccion de fraudes, debido a que esta clase cuenta con muy pocos datos en comparacion a las transacciones legitimas, lo cual podria haber provocado que el modelo clasificara todo como transaccion legitima y aun asi manteniendo un buen acurracy. El otro modelo que se aplico fue un random forest, al cual no se le aplico balanceamiento de las clases, debido a que al aplicar el balance nos entregaba resultados peores a los obtenidos normalmente. Ademas, se aplicaron versiones controladas de ambos modelos, donde se limitaron la cantidad de nodos, se puso una cantidad base de hojas a tener, entre otros parametros controlados.
 
-=======
 # Interpretacion
 Sabemos que los fraudes en tarjetas de creditos son acciones que son bastantes perjudiciales para las empresas que ofrecen estos servicios, ya que generan una serie de problemas como la desconfianza de sus clientes, la perdida de dinero, entre otros. Por lo que, para las instituciones financieran es de gran importancia poder detectar este tipo de transacciones cuanto antes para poder tener una respuesta inmediata, es por eso que desarrollar un modelo de clasificacion que sea capaz de predecir las transacciones fraudulentas es una gran herramienta para estas empresas, que es lo que buscaba crear el modelo desarrollado en este trabajo. Sin embargo, la gran diferencia entre las clasificaciones representa un desafio, ya que se debe establecer bien la prioridad de la empresa, es decir, si estos priorizan detectar los fraudes a pesar que pueda generar que clasifiquen como fraude a transacciones legitimas o si es mejor detectar los fraudes pero minimizando los falsos negativos. 
-
-
-
 
 Con los resultados obtenidos logramos notar que todos los modelos tuvieron resultados muy buenos en cuanto a clasificar las transacciones legitimas. por otro lado, los resultados al clasificar las transacciones fraudulentas en los modelos de Arbol fue moderada, y en los modelos de random forest mejoro considerablemente. las metricas resultantes de clasificar fraude son las siguientes:
 
@@ -120,5 +116,10 @@ Con los resultados obtenidos logramos notar que todos los modelos tuvieron resul
 | Random forest     |  96.7%  |   80.8%   |  72.2% |  76.3%  |
 | RF controlado     |  97.5%  |   86.4%   |  78.5% |  82.2%  |
 
+Con esta informacion podemos notar que la cantidad de mejor manera que el modelo que presenta los mejores resultados de todos, corresponde al random forest controlado, donde tenemos el mejor acurracy (es decir que tiene la mayor proporcion de aciertos de ambas categorias), tiene una precision considerablemente elevada en comparacion al resto de modelos, y ademas de esto tiene el recall mas alto, por lo tanto este modelo es capaz de predecir una mayor cantidad de verdaderos negativos sin sacrificar la presicion del modelo, al contrario que los otros donde para mejorar la deteccion de los fraudes estos tendian a clasificar como fraude a transacciones legitimas.
+ 
+
+
+
 https://scikit-learn.org/stable/modules/ensemble.html#forests-of-randomized-trees
-dd
+ddgit
