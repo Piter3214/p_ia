@@ -77,9 +77,7 @@ Limitaciones:
 - Mayor costo computacional.
 
 
-https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html
 
-data set https://www.kaggle.com/datasets/anurag629/credit-card-fraud-transaction-data/data# p_ia
 
 
 # Implemetacion
@@ -103,9 +101,11 @@ Posteriormente Procedemos a separar los datos, donde el 70% sera para el trainin
 
 6. Aplicar modelo
 Primero se aplicaco un modelo de Desicion Tree, donde se aplico un balanceamiento de los pesos de las clases con la finalidad de que el modelo mejore la precision en la deteccion de fraudes, debido a que esta clase cuenta con muy pocos datos en comparacion a las transacciones legitimas, lo cual podria haber provocado que el modelo clasificara todo como transaccion legitima y aun asi manteniendo un buen acurracy. El otro modelo que se aplico fue un random forest, al cual no se le aplico balanceamiento de las clases, debido a que al aplicar el balance nos entregaba resultados peores a los obtenidos normalmente. Ademas, se aplicaron versiones controladas de ambos modelos, donde se limitaron la cantidad de nodos, se puso una cantidad base de hojas a tener, entre otros parametros controlados.
-
 # Interpretacion
+
 Sabemos que los fraudes en tarjetas de creditos son acciones que son bastantes perjudiciales para las empresas que ofrecen estos servicios, ya que generan una serie de problemas como la desconfianza de sus clientes, la perdida de dinero, entre otros. Por lo que, para las instituciones financieran es de gran importancia poder detectar este tipo de transacciones cuanto antes para poder tener una respuesta inmediata, es por eso que desarrollar un modelo de clasificacion que sea capaz de predecir las transacciones fraudulentas es una gran herramienta para estas empresas, que es lo que buscaba crear el modelo desarrollado en este trabajo. Sin embargo, la gran diferencia entre las clasificaciones representa un desafio, ya que se debe establecer bien la prioridad de la empresa, es decir, si estos priorizan detectar los fraudes a pesar que pueda generar que clasifiquen como fraude a transacciones legitimas o si es mejor detectar los fraudes pero minimizando los falsos negativos. 
+
+# Resultados
 
 Con los resultados obtenidos logramos notar que todos los modelos tuvieron resultados muy buenos en cuanto a clasificar las transacciones legitimas. por otro lado, los resultados al clasificar las transacciones fraudulentas en los modelos de Arbol fue moderada, y en los modelos de random forest mejoro considerablemente. las metricas resultantes de clasificar fraude son las siguientes:
 
@@ -118,8 +118,46 @@ Con los resultados obtenidos logramos notar que todos los modelos tuvieron resul
 
 Con esta informacion podemos notar que la cantidad de mejor manera que el modelo que presenta los mejores resultados de todos, corresponde al random forest controlado, donde tenemos el mejor acurracy (es decir que tiene la mayor proporcion de aciertos de ambas categorias), tiene una precision considerablemente elevada en comparacion al resto de modelos, y ademas de esto tiene el recall mas alto, por lo tanto este modelo es capaz de predecir una mayor cantidad de verdaderos negativos sin sacrificar la presicion del modelo, al contrario que los otros donde para mejorar la deteccion de los fraudes estos tendian a clasificar como fraude a transacciones legitimas.
  
+ # Discusión: Interpretación de Resultados
+
+Sabemos que los fraudes en tarjetas de crédito son acciones que resultan bastante perjudiciales para las empresas que ofrecen estos servicios, ya que generan una serie de problemas como la desconfianza de sus clientes, la pérdida de dinero, entre otros. Por lo tanto, para las instituciones financieras es de gran importancia poder detectar este tipo de transacciones cuanto antes, a fin de poder tener una respuesta inmediata. Es por eso que desarrollar un modelo de clasificación que sea capaz de predecir las transacciones fraudulentas es una gran herramienta para estas empresas, que es lo que se buscó con el modelo desarrollado en este trabajo.
+
+Sin embargo, la gran diferencia entre las clases representa un desafío, ya que se debe establecer bien la prioridad de la empresa, es decir, si estas priorizan detectar los fraudes a pesar de que pueda generar clasificaciones incorrectas de transacciones legítimas, o si se debe minimizar los falsos negativos. 
+
+Con los resultados obtenidos, logramos notar que todos los modelos tuvieron resultados muy buenos en cuanto a la clasificación de transacciones legítimas. Por otro lado, los resultados al clasificar las transacciones fraudulentas fueron moderados en los modelos de árbol de decisión, y mejoraron considerablemente en los modelos Random Forest. De acuerdo con las métricas obtenidas, el modelo que presentó el mejor rendimiento fue el Random Forest con control de overfitting.
+
+Discusión: Limitaciones del Modelo
+
+A pesar de los buenos resultados obtenidos, el modelo desarrollado presenta algunas limitaciones importantes que deben ser consideradas:
+
+1. Desbalance de clases: Aunque se aplicaron técnicas para controlar el desbalance, el dataset contiene una proporción muy baja de transacciones fraudulentas, lo que puede afectar la capacidad del modelo para detectarlas adecuadamente.
+
+2. Sensibilidad frente a falsos negativos: A pesar de obtener un buen recall, todavía existe un porcentaje significativo de fraudes no detectados, lo que representa un riesgo para las instituciones financieras.
+
+3. Generalización del modelo: El modelo fue entrenado en un dataset específico que esta relacionado con el continente europeo por la moneda que sta en libras esterlinas , lo cual limita su aplicación en otros contextos sin reentrenamiento.
 
 
+# Conclusion
+
+En conclusión, se logró desarrollar un sistema capaz de identificar transacciones fraudulentas a partir de un conjunto de datos real, utilizando técnicas de clasificación supervisada. A través del análisis de múltiples modelos, se pudo observar que el modelo Random Forest con control de overfitting fue el más eficaz en términos de precisión, recall y F1-score. Estos resultados indican que, aunque el desafío del desbalance de clases sigue siendo una barrera, el uso de técnicas avanzadas y el ajuste adecuado de parámetros permiten construir modelos robustos y útiles para aplicaciones reales. La implementación de este tipo de soluciones puede ser de gran valor para entidades financieras en la prevención de fraudes, aunque se deben considerar cuidadosamente las limitaciones del modelo antes de aplicarlo en producción.
+
+
+
+
+# Data set
+
+https://www.kaggle.com/datasets/anurag629/credit-card-fraud-transaction-data/data
+
+# paginas de librerias para profundizar mejor
 
 https://scikit-learn.org/stable/modules/ensemble.html#forests-of-randomized-trees
-ddgit
+
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html
+
+https://www.datacamp.com/es/tutorial/guide-to-data-cleaning-in-python
+
+https://codificandobits.com/tutorial/limpieza-de-datos-con-pandas/
+
+# codigos de proyecto de un ramo anterior
+
+https://drive.google.com/file/d/1RQlFJJNKSXpSkauxRKAUV318hZRJu1lT/view?usp=drive_link
